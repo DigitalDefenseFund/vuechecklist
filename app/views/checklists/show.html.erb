@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<div class="card w-25">
+  <div class="card-header">
+    <strong>Name:</strong>
+    <%= @checklist.name %>
+  </div>
+
+  <%= tag.div id: :todos, data: {todos: @checklist.todos.to_json, checklist: @checklist.id } %>
+
+</div>
+
+<%= link_to 'Edit', edit_checklist_path(@checklist) %> |
+<%= link_to 'Back', checklists_path %>
